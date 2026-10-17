@@ -1,0 +1,26 @@
+{
+  "name": "speak-n-spell-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Offline web (PWA) version of Speak & Spell for iPhone and Android.",
+  "scripts": {
+    "extract": "node scripts/extract-words.mjs",
+    "predev": "npm run extract",
+    "dev": "vite",
+    "prebuild": "npm run extract",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "pretest": "npm run extract",
+    "test": "vitest run",
+    "icons": "node scripts/generate-icons.mjs"
+  },
+  "devDependencies": {
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5",
+    "typescript": "~5.9",
+    "vite": "^8.3.4",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.0.5"
+  }
+}

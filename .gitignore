@@ -9,3 +9,9 @@
 .cxx
 local.properties
 /app/build
+
+# Web app (web/)
+web/node_modules/
+web/dist/
+web/src/generated/
+web/public/sounds/
